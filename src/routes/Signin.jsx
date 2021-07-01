@@ -8,7 +8,7 @@ const Signin = () => {
       <input type="text" name="" id="" />
       <input type="password" name="" id="" />
       <button>Sign in</button>
-      <h6>Not yet register? Sign up</h6>
+      <h6>Not yet register? <span className="signin-link" >Sign up</span></h6>
     </form>
   </div>);
 }
