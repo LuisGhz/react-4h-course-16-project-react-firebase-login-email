@@ -8,3 +8,7 @@
   display: grid;
   flex-direction: column;
 }
+
+.signin > form > input {
+  margin-bottom: 1rem;
+}
