@@ -12,3 +12,8 @@
 .signin > form > input {
   margin-bottom: 1rem;
 }
+
+.signin-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
