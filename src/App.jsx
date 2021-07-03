@@ -23,8 +23,7 @@ function App() {
 
   return (
     <div style={{ textAlign: 'center', paddingTop: '1rem' }}>
-      {/* <Home /> */}
-      <Signin />
+      { user ? <Home /> : <Signin /> }
     </div>
   );
 }
