@@ -1,4 +1,4 @@
-import useRef from 'react';
+import { useRef } from 'react';
 import { auth } from 'config/firebase';
 import './Signin.css';
 
@@ -19,8 +19,8 @@ const Signin = () => {
   <div className="signin">
     <form action="">
       <h1>Sign in</h1>
-      <input type="email" ref={ emailRef } />
-      <input type="password" ref={ passwordRef } />
+      <input type="email" ref={ emailRef } autocomplete="username" />
+      <input type="password" ref={ passwordRef } autocomplete="current-password" />
       <button>Sign in</button>
       <h6>Not yet register? <span className="signin-link" onClick={ singUp } >Sign up</span></h6>
     </form>
