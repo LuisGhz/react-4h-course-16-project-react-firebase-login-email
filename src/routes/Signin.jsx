@@ -1,10 +1,20 @@
 import useRef from 'react';
+import { auth } from 'config/firebase';
 import './Signin.css';
 
 const Signin = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
+  const singUp = e => {
+    e.preventDefault();
+    auth.createUserWithEmailAndPassword(
+      emailRef.current.value,
+      passwordRef.current.value
+    )
+    .then( user => console.log(user) )
+    .catch( err => console.error(err) );
+  }
   return (
   <div className="signin">
     <form action="">
@@ -12,7 +22,7 @@ const Signin = () => {
       <input type="email" ref={ emailRef } />
       <input type="password" ref={ passwordRef } />
       <button>Sign in</button>
-      <h6>Not yet register? <span className="signin-link" >Sign up</span></h6>
+      <h6>Not yet register? <span className="signin-link" onClick={ singUp } >Sign up</span></h6>
     </form>
   </div>);
 }
