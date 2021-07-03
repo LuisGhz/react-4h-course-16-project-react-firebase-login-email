@@ -6,7 +6,7 @@ const Signin = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
 
-  const singUp = e => {
+  const signUp = e => {
     e.preventDefault();
     auth.createUserWithEmailAndPassword(
       emailRef.current.value,
@@ -16,7 +16,7 @@ const Signin = () => {
     .catch( err => console.error(err) );
   }
 
-  const singIn = e => {
+  const signIn = e => {
     e.preventDefault();
     auth.signInWithEmailAndPassword(
       emailRef.current.value,
@@ -31,8 +31,8 @@ const Signin = () => {
       <h1>Sign in</h1>
       <input type="email" ref={ emailRef } autocomplete="username" />
       <input type="password" ref={ passwordRef } autocomplete="current-password" />
-      <button onClick={ singIn } >Sign in</button>
-      <h6>Not yet register? <span className="signin-link" onClick={ singUp } >Sign up</span></h6>
+      <button onClick={ signIn } >Sign in</button>
+      <h6>Not yet register? <span className="signin-link" onClick={ signUp } >Sign up</span></h6>
     </form>
   </div>);
 }
